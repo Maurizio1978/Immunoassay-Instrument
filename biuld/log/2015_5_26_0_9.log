@@ -1,0 +1,47 @@
+[0:9:6] ---> [Info] Main >>> main::Application Start
+[0:9:6] ---> [Info] Configuration >>
+[0:9:6] ---> [Info] MotorZThread >>> 
+[0:9:6] ---> [Info] PumpThread >>> 
+[0:9:6] ---> [Info] Instrument version = mago4
+[0:9:6] ---> [Info] Configuration <<
+[0:9:11] ---> [Info] PumpThread >>> residual volume = 45
+[0:9:11] ---> [Info] MotorZThread >>> Going Down
+[0:9:11] ---> [Info] MotorZThread <<< 
+[0:9:11] ---> [Info] MotorZThread >>> 
+[0:9:16] ---> [Info] PumpThread >>> residual volume = 40
+[0:9:16] ---> [Info] MotorZThread >>> Going Down
+[0:9:16] ---> [Info] MotorZThread <<< 
+[0:9:16] ---> [Info] MotorZThread >>> 
+[0:9:21] ---> [Info] PumpThread >>> residual volume = 35
+[0:9:21] ---> [Info] MotorZThread >>> Going Down
+[0:9:21] ---> [Info] MotorZThread <<< 
+[0:9:21] ---> [Info] MotorZThread >>> 
+[0:9:26] ---> [Info] PumpThread >>> residual volume = 30
+[0:9:26] ---> [Info] MotorZThread >>> Going Down
+[0:9:26] ---> [Info] MotorZThread <<< 
+[0:9:26] ---> [Info] MotorZThread >>> 
+[0:9:31] ---> [Info] PumpThread >>> residual volume = 25
+[0:9:31] ---> [Info] MotorZThread >>> Going Down
+[0:9:31] ---> [Info] MotorZThread <<< 
+[0:9:31] ---> [Info] MotorZThread >>> 
+[0:9:36] ---> [Info] PumpThread >>> residual volume = 20
+[0:9:36] ---> [Info] MotorZThread >>> Going Down
+[0:9:36] ---> [Info] MotorZThread <<< 
+[0:9:36] ---> [Info] MotorZThread >>> 
+[0:9:41] ---> [Info] PumpThread >>> residual volume = 15
+[0:9:41] ---> [Info] MotorZThread >>> Going Down
+[0:9:41] ---> [Info] MotorZThread <<< 
+[0:9:41] ---> [Info] MotorZThread >>> 
+[0:9:46] ---> [Info] PumpThread >>> residual volume = 10
+[0:9:46] ---> [Info] MotorZThread >>> Going Down
+[0:9:46] ---> [Info] MotorZThread <<< 
+[0:9:46] ---> [Info] MotorZThread >>> 
+[0:9:52] ---> [Info] PumpThread >>> residual volume = 5
+[0:9:52] ---> [Info] MotorZThread >>> Going Down
+[0:9:52] ---> [Info] MotorZThread <<< 
+[0:9:52] ---> [Info] MotorZThread >>> 
+[0:9:57] ---> [Info] PumpThread >>> residual volume = 0
+[0:9:57] ---> [Info] PumpThread <<< 
+[0:9:57] ---> [Info] MotorZThread >>> Going Down
+[0:9:57] ---> [Info] MotorZThread <<< 
+[0:9:57] ---> [Info] Main <<< main::Application End

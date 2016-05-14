@@ -1,0 +1,47 @@
+[23:49:29] ---> [Info] Main >>> main::Application Start
+[23:49:29] ---> [Info] Configuration >>
+[23:49:29] ---> [Info] PumpThread >>> 
+[23:49:29] ---> [Info] MotorZThread >>> 
+[23:49:29] ---> [Info] Instrument version = mago4
+[23:49:29] ---> [Info] Configuration <<
+[23:49:34] ---> [Info] PumpThread >>> residual volume = 45
+[23:49:34] ---> [Info] MotorZThread >>> Going Down
+[23:49:34] ---> [Info] MotorZThread <<< 
+[23:49:34] ---> [Info] MotorZThread >>> 
+[23:49:39] ---> [Info] PumpThread >>> residual volume = 40
+[23:49:39] ---> [Info] MotorZThread >>> Going Down
+[23:49:39] ---> [Info] MotorZThread <<< 
+[23:49:39] ---> [Info] MotorZThread >>> 
+[23:49:44] ---> [Info] PumpThread >>> residual volume = 35
+[23:49:44] ---> [Info] MotorZThread >>> Going Down
+[23:49:44] ---> [Info] MotorZThread <<< 
+[23:49:44] ---> [Info] MotorZThread >>> 
+[23:49:49] ---> [Info] PumpThread >>> residual volume = 30
+[23:49:49] ---> [Info] MotorZThread >>> Going Down
+[23:49:49] ---> [Info] MotorZThread <<< 
+[23:49:49] ---> [Info] MotorZThread >>> 
+[23:49:54] ---> [Info] PumpThread >>> residual volume = 25
+[23:49:54] ---> [Info] MotorZThread >>> Going Down
+[23:49:54] ---> [Info] MotorZThread <<< 
+[23:49:54] ---> [Info] MotorZThread >>> 
+[23:49:59] ---> [Info] PumpThread >>> residual volume = 20
+[23:49:59] ---> [Info] MotorZThread >>> Going Down
+[23:49:59] ---> [Info] MotorZThread <<< 
+[23:49:59] ---> [Info] MotorZThread >>> 
+[23:50:4] ---> [Info] PumpThread >>> residual volume = 15
+[23:50:4] ---> [Info] MotorZThread >>> Going Down
+[23:50:4] ---> [Info] MotorZThread <<< 
+[23:50:4] ---> [Info] MotorZThread >>> 
+[23:50:9] ---> [Info] PumpThread >>> residual volume = 10
+[23:50:9] ---> [Info] MotorZThread >>> Going Down
+[23:50:9] ---> [Info] MotorZThread <<< 
+[23:50:9] ---> [Info] MotorZThread >>> 
+[23:50:14] ---> [Info] PumpThread >>> residual volume = 5
+[23:50:14] ---> [Info] MotorZThread >>> Going Down
+[23:50:14] ---> [Info] MotorZThread <<< 
+[23:50:14] ---> [Info] MotorZThread >>> 
+[23:50:19] ---> [Info] PumpThread >>> residual volume = 0
+[23:50:19] ---> [Info] PumpThread <<< 
+[23:50:19] ---> [Info] MotorZThread >>> Going Down
+[23:50:19] ---> [Info] MotorZThread <<< 
+[23:50:19] ---> [Info] MotorZThread >>> 

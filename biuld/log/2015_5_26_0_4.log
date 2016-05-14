@@ -1,0 +1,34 @@
+[0:4:39] ---> [Info] Main >>> main::Application Start
+[0:4:39] ---> [Info] PumpThread >>> 
+[0:4:39] ---> [Info] MotorZThread >>> 
+[0:4:39] ---> [Info] Configuration >>
+[0:4:39] ---> [Info] Instrument version = mago4
+[0:4:39] ---> [Info] Configuration <<
+[0:4:45] ---> [Info] PumpThread >>> residual volume = 45
+[0:4:45] ---> [Info] MotorZThread >>> Going Down
+[0:4:45] ---> [Info] MotorZThread <<< 
+[0:4:45] ---> [Info] MotorZThread >>> 
+[0:4:50] ---> [Info] PumpThread >>> residual volume = 40
+[0:4:50] ---> [Info] MotorZThread >>> Going Down
+[0:4:50] ---> [Info] MotorZThread <<< 
+[0:4:50] ---> [Info] MotorZThread >>> 
+[0:4:55] ---> [Info] PumpThread >>> residual volume = 35
+[0:4:55] ---> [Info] MotorZThread >>> Going Down
+[0:4:55] ---> [Info] MotorZThread <<< 
+[0:4:55] ---> [Info] MotorZThread >>> 
+[0:5:0] ---> [Info] PumpThread >>> residual volume = 30
+[0:5:0] ---> [Info] MotorZThread >>> Going Down
+[0:5:0] ---> [Info] MotorZThread <<< 
+[0:5:0] ---> [Info] MotorZThread >>> 
+[0:5:5] ---> [Info] PumpThread >>> residual volume = 25
+[0:5:5] ---> [Info] MotorZThread >>> Going Down
+[0:5:5] ---> [Info] MotorZThread <<< 
+[0:5:5] ---> [Info] MotorZThread >>> 
+[0:5:10] ---> [Info] PumpThread >>> residual volume = 20
+[0:5:10] ---> [Info] MotorZThread >>> Going Down
+[0:5:10] ---> [Info] MotorZThread <<< 
+[0:5:10] ---> [Info] MotorZThread >>> 
+[0:5:15] ---> [Info] PumpThread >>> residual volume = 15
+[0:5:15] ---> [Info] MotorZThread >>> Going Down
+[0:5:15] ---> [Info] MotorZThread <<< 
+[0:5:15] ---> [Info] MotorZThread >>> 

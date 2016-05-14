@@ -1,0 +1,17 @@
+[22:55:3] ---> [Info] Main >>> main::Application Start
+[22:55:3] ---> [Info] Configuration >>
+[22:55:3] ---> [Info] PumpThread >>> 
+[22:55:3] ---> [Info] Instrument version = mago4
+[22:55:3] ---> [Info] Configuration <<
+[22:55:8] ---> [Info] cazzo 
+[22:55:13] ---> [Info] cazzo 
+[22:55:18] ---> [Info] cazzo 
+[22:55:23] ---> [Info] cazzo 
+[22:55:28] ---> [Info] cazzo 
+[22:55:33] ---> [Info] cazzo 
+[22:55:38] ---> [Info] cazzo 
+[22:55:43] ---> [Info] cazzo 
+[22:55:48] ---> [Info] cazzo 
+[22:55:53] ---> [Info] cazzo 
+[22:55:53] ---> [Info] PumpThread <<< 
+[22:55:53] ---> [Info] Main <<< main::Application End

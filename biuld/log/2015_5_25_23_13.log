@@ -1,0 +1,20 @@
+[23:13:32] ---> [Info] Main >>> main::Application Start
+[23:13:32] ---> [Info] Configuration >>
+[23:13:32] ---> [Info] MotorZThread >>> 
+[23:13:32] ---> [Info] PumpThread >>> 
+[23:13:32] ---> [Info] Instrument version = mago4
+[23:13:32] ---> [Info] Configuration <<
+[23:13:37] ---> [Info] PumpThread >>> residual volume = 45
+[23:13:37] ---> [Info] MotorZThread >>> Going Down
+[23:13:37] ---> [Info] MotorZThread <<< 
+[23:13:42] ---> [Info] PumpThread >>> residual volume = 40
+[23:13:47] ---> [Info] PumpThread >>> residual volume = 35
+[23:13:52] ---> [Info] PumpThread >>> residual volume = 30
+[23:13:57] ---> [Info] PumpThread >>> residual volume = 25
+[23:14:2] ---> [Info] PumpThread >>> residual volume = 20
+[23:14:7] ---> [Info] PumpThread >>> residual volume = 15
+[23:14:12] ---> [Info] PumpThread >>> residual volume = 10
+[23:14:17] ---> [Info] PumpThread >>> residual volume = 5
+[23:14:22] ---> [Info] PumpThread >>> residual volume = 0
+[23:14:22] ---> [Info] PumpThread <<< 
+[23:14:22] ---> [Info] Main <<< main::Application End

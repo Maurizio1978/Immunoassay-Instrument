@@ -1,0 +1,7 @@
+[23:4:20] ---> [Info] Main >>> main::Application Start
+[23:4:20] ---> [Info] Configuration >>
+[23:4:20] ---> [Info] PumpThread >>> 
+[23:4:20] ---> [Info] Instrument version = mago4
+[23:4:20] ---> [Info] Configuration <<
+[23:4:22] ---> [Info] PumpThread <<< 
+[23:4:22] ---> [Info] Main <<< main::Application End

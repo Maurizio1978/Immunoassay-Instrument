@@ -1,0 +1,5 @@
+[14:3:0] ---> [Info] Main >>> main::Application Start
+[14:3:3] ---> [Info] Configuration >>
+[14:3:3] ---> [Info] Instrument version = mago4
+[14:3:3] ---> [Info] Configuration <<
+[14:3:3] ---> [Info] Main <<< main::Application End
