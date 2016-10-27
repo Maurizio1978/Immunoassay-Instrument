@@ -87,3 +87,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+biuld/debug/InstrumentBuilder.exe
+*.exe
+biuld/log/2016_9_9_19_14.log
+*.exe

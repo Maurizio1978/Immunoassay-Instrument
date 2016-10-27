@@ -5,6 +5,7 @@
 #include <fstream>
 #include <instrumentcreator.h>
 #include <Templates/matrix.h>
+#include <QtTest>
 //#include <SampleObservers/sampleobserver.h>
 
 tthread::mutex aspiration_mutex;
