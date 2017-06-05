@@ -1,132 +1,154 @@
 #include "mainmenu.h"
+#include <Logger/logger.h>
 #include <QApplication>
 #include <QFileDialog>
 //#include <reader.h>
 #include <fstream>
-#include <instrumentcreator.h>
+//#include <instrumentcreator.h>
 #include <Templates/matrix.h>
 #include <QtTest>
+#include <Instrument/configuration.h>
+
 //#include <SampleObservers/sampleobserver.h>
 
-tthread::mutex aspiration_mutex;
-tthread::condition_variable aspiration_con;
-int startVolume = 50;
-bool goDown = false;
+#include <boost/shared_ptr.hpp>
 
-void PumpThread(void *param)
-{
-  logger::Info("PumpThread >>> ");
-  while (startVolume > 0)
-  {
-      startVolume -= 1;
-      //tthread::this_thread::sleep_for(tthread::chrono::seconds(1));
-      if ((startVolume % 5) == 0)
-      {
-            logger::Info("PumpThread >>> residual volume = %d", startVolume);
-            aspiration_mutex.lock();
-            goDown = true;
-            aspiration_con.notify_all();
-            aspiration_mutex.unlock();
-      }
-  }
+#include <Factory/factory.h>
 
-  logger::Info("PumpThread <<< ");
-}
 
-void MotorZThread(void *param)
-{
-    while (true)
-    {
-          logger::Info("MotorZThread >>> ");
-          aspiration_mutex.lock();
-          while (!goDown)
-              aspiration_con.wait(aspiration_mutex);
+//tthread::mutex aspiration_mutex;
+//tthread::condition_variable aspiration_con;
+//int startVolume = 50;
+//bool goDown = false;
 
-          logger::Info("MotorZThread >>> Going Down");
-          goDown = false;
-          aspiration_mutex.unlock();
+//void PumpThread( void *param )
+//{
+//  logger::Info( "PumpThread >>> " );
 
-          logger::Info("MotorZThread <<< ");
-    }
-}
+//  while ( startVolume > 0 ) {
+//    startVolume -= 1;
+
+//    //tthread::this_thread::sleep_for(tthread::chrono::seconds(1));
+//    if ( ( startVolume % 5 ) == 0 ) {
+//      logger::Info( "PumpThread >>> residual volume = %d", startVolume );
+//      aspiration_mutex.lock();
+//      goDown = true;
+//      aspiration_con.notify_all();
+//      aspiration_mutex.unlock();
+//    }
+//  }
+
+//  logger::Info( "PumpThread <<< " );
+//}
+
+//void MotorZThread( void *param )
+//{
+//  while ( true ) {
+//    logger::Info( "MotorZThread >>> " );
+//    aspiration_mutex.lock();
+
+//    while ( !goDown ) {
+//      aspiration_con.wait( aspiration_mutex );
+//    }
+
+//    logger::Info( "MotorZThread >>> Going Down" );
+//    goDown = false;
+//    aspiration_mutex.unlock();
+
+//    logger::Info( "MotorZThread <<< " );
+//  }
+//}
 // main function, loop
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    MainMenu w;
-    try
-    {
-        logger::Info("Main >>> main::Application Start");
-        Templates::TMatrix<int> matrix(3, 3);
+//  boost::shared_ptr<int> p(new int(42));
 
-        time_t rawtime;
-        time(&rawtime);
+  QApplication a(argc, argv);
+  MainMenu w;
 
-        tm *bd;
-        bd = localtime(&rawtime);
-        bd->tm_mday = 1;
-        bd->tm_mon = 1;
-        bd->tm_year = 100;
-        Sample sample("marco", "123", bd);
+  try
+  {
+      logger::Info("Main >>> main::Application Start");
 
-        SamplesList samplesList;
-        samplesList.AddSample(sample);
+//    Templates::TMatrix<int> matrix( 3, 3 );
 
-//        std::string configurationPath = QDir::currentPath().toStdString();
-//        configurationPath += "/Configuration.xml";
+//    time_t rawtime;
+//    time( &rawtime );
 
-//        QFile file(configurationPath.c_str());
-//        if (!file.open(QIODevice::ReadOnly))
-//        {
-//            logger::GetInstance().operator <<("Error Opening Configuration.xml");
-//            throw;
-//        }
-//        // Set data into the QDomDocument before processing
-//        QDomDocument configurationXml;
-//        configurationXml.setContent(&file);
-//        file.close();
+//    tm *bd;
+//    bd = localtime( &rawtime );
+//    bd->tm_mday = 1;
+//    bd->tm_mon = 1;
+//    bd->tm_year = 100;
+//    Sample sample( "marco", "123", bd );
 
-//        QString instrumentVersion("");
-//        QDomElement root = configurationXml.documentElement();
-//        QDomElement element = root.firstChild().toElement();
-//        while (!element.isNull())
-//        {
-//            if (element.tagName() == "instrument")
-//                instrumentVersion = element.attribute("type", "");
+//    SamplesList samplesList;
+//    samplesList.AddSample( sample );
 
-//            element = element.nextSibling().toElement();
-//        }
-//        if (instrumentVersion.isEmpty())
-//            throw;
+    //        std::string configurationPath = QDir::currentPath().toStdString();
+    //        configurationPath += "/Configuration.xml";
 
-//        tthread::thread mt(MotorZThread, NULL);
-//        tthread::thread pt(PumpThread, NULL);
+    //        QFile file(configurationPath.c_str());
+    //        if (!file.open(QIODevice::ReadOnly))
+    //        {
+    //            logger::GetInstance().operator <<("Error Opening Configuration.xml");
+    //            throw;
+    //        }
+    //        // Set data into the QDomDocument before processing
+    //        QDomDocument configurationXml;
+    //        configurationXml.setContent(&file);
+    //        file.close();
 
+    //        QString instrumentVersion("");
+    //        QDomElement root = configurationXml.documentElement();
+    //        QDomElement element = root.firstChild().toElement();
+    //        while (!element.isNull())
+    //        {
+    //            if (element.tagName() == "instrument")
+    //                instrumentVersion = element.attribute("type", "");
 
-//        Configuration instrumentConfiguration;
+    //            element = element.nextSibling().toElement();
+    //        }
+    //        if (instrumentVersion.isEmpty())
+    //            throw;
 
-        InstrumentCreator::ReadXML();
-
-        Builder *instrumentBuilder;
-        if (InstrumentCreator::m_InstrumentVersion == "mago4")
-            instrumentBuilder = new Mago4Builder();
-        else if (InstrumentCreator::m_InstrumentVersion == "mago4s")
-            instrumentBuilder = new Mago4sBuilder();
-
-        InstrumentCreator instrumentCreator(instrumentBuilder, &samplesList);
-        instrumentCreator.CreateInstrument();
+    //        tthread::thread mt(MotorZThread, NULL);
+    //        tthread::thread pt(PumpThread, NULL);
 
 
+    //        Configuration instrumentConfiguration;
 
-//        pt.join();
-//        mt.join();
-        logger::Info("Main <<< main::Application End");
-    }
-    catch (...)
-    {
+//    InstrumentCreator::ReadXML();
+      Instrument::Configuration::Instance().ReadParameters();
+//a.setA();
 
-    }
+//    instrument::Configuration::ReadParameters();
+//    Builder *instrumentBuilder;
+    factory::Factory *aFactory = NULL;
 
-    w.show();
-    a.exec();
+//    if ( InstrumentCreator::m_InstrumentVersion == "mago4" ) {
+//      aFactory = new factory::Mago4Factory();
+
+//      instrumentBuilder = new Mago4Builder();
+//    } else if ( InstrumentCreator::m_InstrumentVersion == "mago4s" ) {
+
+//    }
+
+//    aFactory = new factory::Mago4sFactory();
+//    instrumentBuilder = new Mago4sBuilder();
+
+//    InstrumentCreator instrumentCreator( instrumentBuilder, &samplesList );
+//    instrumentCreator.CreateInstrument();
+
+
+
+    //        pt.join();
+    //        mt.join();
+    logger::Info( "Main <<< main::Application End" );
+  } catch ( ... ) {
+
+  }
+
+  w.show();
+  a.exec();
 }
