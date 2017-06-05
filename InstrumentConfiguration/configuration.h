@@ -6,9 +6,13 @@
 class Configuration
 {
 public:
-    QString m_InstrumentVersion;
     Configuration();
     ~Configuration();
+
+    void ReadParameters();
+
+private:
+    QString _InstrumentVersion;
 };
 
 #endif // CONFIGURATION_H

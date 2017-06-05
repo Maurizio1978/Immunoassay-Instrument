@@ -4,6 +4,15 @@
 
 Configuration::Configuration()
 {
+
+}
+
+Configuration::~Configuration()
+{
+
+}
+void Configuration::ReadParameters()
+{
     try
     {
         logger::Info("Configuration >>");
@@ -26,17 +35,17 @@ Configuration::Configuration()
         while (!element.isNull())
         {
             if (element.tagName() == "instrument")
-                m_InstrumentVersion = element.attribute("type", "");
+                _InstrumentVersion = element.attribute("type", "");
 
             element = element.nextSibling().toElement();
         }
 
-        if (m_InstrumentVersion.isEmpty())
+        if (_InstrumentVersion.isEmpty())
         {
             logger::Error("Configuration:: Error Version is empty!");
-            throw ConfigurationException(m_InstrumentVersion.toStdString());
+            throw ConfigurationException(_InstrumentVersion.toStdString());
         }
-        logger::Info("Instrument version = %s", m_InstrumentVersion.toStdString());
+        logger::Info("Instrument version = %s", _InstrumentVersion.toStdString());
         logger::Info("Configuration <<");
     }
     catch (ConfigurationException &cException)
@@ -45,8 +54,5 @@ Configuration::Configuration()
     }
 }
 
-Configuration::~Configuration()
-{
 
-}
 
